@@ -28,7 +28,7 @@ const Header = (props) => {
                     edge="start"
                     className={classes.menuButton}
                     color="inherit"
-                    aria-label="menu"
+                    aria-label="menu" 
                 >
                     <MenuButton />
                 </IconButton>
@@ -37,7 +37,7 @@ const Header = (props) => {
                     variant="h6"
                     color="inherit"
                 >
-                    Ilha Calistenica
+                    Material UI
                 </Typography>
             </Toolbar>
         </AppBar>
