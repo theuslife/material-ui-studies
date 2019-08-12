@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
 import { Grid, Paper, Typography, List, ListItem, ListItemText } from '@material-ui/core';
+import LeftPane from './LeftPane';
 
-const Exercises = ({ 
-    exercises, 
-    exercise, 
-    exercise: { id, title, description }, 
-    category, 
-    onSelect, 
+const Exercises = ({
+    exercises,
+    exercise,
+    exercise: { id, title, description },
+    category,
+    onSelect,
 }) => {
 
     const classes = {
@@ -63,21 +64,16 @@ const Exercises = ({
             <Grid item xs={6}>
                 <Paper style={classes.paperContainer}>
                     {id &&
-                        <>
-                            <Typography
-                                variant="h4"
-                                component='h2'
-                            >
-                                {title}
-                            </Typography>
-
-                            <Typography
-                                style={{ marginTop: 20 }}
-                                variant='subtitle1'
-                            >
-                                {description}
-                            </Typography>
-                        </>
+                        <LeftPane
+                            title={title}
+                            description={description}
+                        />
+                    }
+                    {!id &&
+                        <LeftPane
+                            title='Welcome'
+                            description='Please select an exercise i the list on the left'
+                        />
                     }
 
                 </Paper>
