@@ -6,6 +6,10 @@ import Tab from '@material-ui/core/Tab';
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        padding: 10
     }
 }))
 
