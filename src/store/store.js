@@ -1,3 +1,18 @@
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import rootReducer from './reducers/rootReducer'
+
+const loggerMiddleware = createLogger()
+
+export default function configureStore(preloadedState) {
+  return createStore(
+    rootReducer,
+    preloadedState,
+    applyMiddleware(thunkMiddleware, loggerMiddleware)
+  )
+}
+
 export const muscles = [
   'shoulders', 'chest', 'arms', 'back', 'legs'
 ]

@@ -63,6 +63,7 @@ const Exercises = ({
 
             <Grid item xs={6}>
                 <Paper style={classes.paperContainer}>
+                    
                     {id &&
                         <LeftPane
                             title={title}
